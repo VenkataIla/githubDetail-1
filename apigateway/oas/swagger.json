@@ -1,0 +1,52 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Documentation for the GithubDetail domain service.",
+    "version" : "v1",
+    "title" : "GithubDetail API Swagger",
+    "contact" : {
+      "name" : "none Team"
+    }
+  },
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "GithubDetail Domain Object Controller",
+    "description" : "Operations pertaining to GithubDetail domain object."
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/v1/github/detail" : {
+      "get" : {
+        "tags" : [ "GithubDetail Domain Object Controller" ],
+        "summary" : "Add a GithubDetail object to the database",
+        "description" : "",
+        "operationId" : "GithubDetailController_getGithubDetail_GET",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "username",
+          "in" : "query",
+          "description" : "GithubDetail object store in database table",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Successfully created GithubDetail"
+          },
+          "400" : {
+            "description" : "ERROR_CODE_MESSAGE_BAD_REQUEST"
+          },
+          "404" : {
+            "description" : "NON_AUTHORITATIVE_INFORMATION"
+          },
+          "406" : {
+            "description" : "NON_AUTHORITATIVE_INFORMATION"
+          },
+          "500" : {
+            "description" : "ERROR_CODE_MESSAGE_INTERNAL_ERROR"
+          }
+        }
+      }
+    }
+  }
+}
