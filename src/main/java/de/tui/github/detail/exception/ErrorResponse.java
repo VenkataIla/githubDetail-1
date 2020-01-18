@@ -1,9 +1,6 @@
 package de.tui.github.detail.exception;
 
 import org.springframework.http.HttpStatus;
-
-import java.util.Arrays;
-import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
  
 @XmlRootElement(name = "error")

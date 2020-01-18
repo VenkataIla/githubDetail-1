@@ -12,10 +12,10 @@ import java.util.Objects;
 @Data
 public class GithubDetail {
 
-  public String repository;  
-  public String login;
-  public String branch;
-  public String lastCommit;
+    private String repository;
+    private String login;
+    private String branch;
+    private String lastCommit;
 
     public String getRepository() {
         return repository;

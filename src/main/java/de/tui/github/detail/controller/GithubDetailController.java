@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@Api(value="GithubDetail Domain Object Controller", description="Operations pertaining to GithubDetail domain object.")
+@Api(value="GithubDetail Domain Object Controller")
 @RestController
 @RequestMapping(value = "/v1/github")
 public class GithubDetailController {

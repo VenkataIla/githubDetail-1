@@ -16,6 +16,7 @@ public class GithubDetailTest {
     void testEntity() {
         GithubDetail githubDetail = new GithubDetail();
         assertNotNull(githubDetail.hashCode());
+         githubDetail.setLogin("asdf");
         assertEquals(githubDetail.equals(githubDetail), true);
         assertNotNull(githubDetail.toString());
         GithubDetail githubDetail2 = new GithubDetail();
