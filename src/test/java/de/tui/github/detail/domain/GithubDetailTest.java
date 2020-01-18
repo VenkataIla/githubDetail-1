@@ -17,14 +17,14 @@ public class GithubDetailTest {
         GithubDetail githubDetail = new GithubDetail();
         assertNotNull(githubDetail.hashCode());
          githubDetail.setLogin("asdf");
-        assertEquals(githubDetail.equals(githubDetail), true);
+        assertEquals(true, githubDetail.equals(githubDetail));
         assertNotNull(githubDetail.toString());
         GithubDetail githubDetail2 = new GithubDetail();
         githubDetail2.setBranch("abc");
         githubDetail2.setLastCommit("one");
         githubDetail2.setLogin("itsme");
         githubDetail2.setRepository("its Mine");
-        assertEquals(githubDetail.equals(githubDetail2), false);
+        assertEquals(false, githubDetail.equals(githubDetail2));
         
     }
 }

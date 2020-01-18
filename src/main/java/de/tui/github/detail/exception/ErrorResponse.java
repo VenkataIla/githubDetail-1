@@ -2,12 +2,15 @@ package de.tui.github.detail.exception;
 
 import org.springframework.http.HttpStatus;
 import javax.xml.bind.annotation.XmlRootElement;
- 
+
 @XmlRootElement(name = "error")
-public class ErrorResponse 
+public class ErrorResponse
 {
     private HttpStatus status;
     private String message;
+
+    public ErrorResponse() {
+    }
 
     public ErrorResponse(HttpStatus status, String message) {
         super();
@@ -34,8 +37,8 @@ public class ErrorResponse
     @Override
     public String toString() {
         return "ErrorResponse{" +
-                "status=" + status +
-                ", message='" + message + '\'' +
+                "status=" + getStatus() +
+                ", message='" + getMessage() + '\'' +
                 '}';
     }
 }

@@ -10,22 +10,26 @@
   },
   "basePath" : "/",
   "tags" : [ {
-    "name" : "GithubDetail Domain Object Controller",
-    "description" : "Operations pertaining to GithubDetail domain object."
+    "name" : "GithubDetail Domain Object Controller"
   } ],
   "schemes" : [ "http", "https" ],
   "paths" : {
-    "/v1/github/detail" : {
+    "/v1/gitHubByLoginId" : {
       "get" : {
         "tags" : [ "GithubDetail Domain Object Controller" ],
         "summary" : "Add a GithubDetail object to the database",
         "description" : "",
         "operationId" : "GithubDetailController_getGithubDetail_GET",
-        "produces" : [ "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
           "name" : "username",
           "in" : "query",
           "description" : "GithubDetail object store in database table",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "Accept",
+          "in" : "header",
           "required" : true,
           "type" : "string"
         } ],

@@ -19,4 +19,20 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler
         return new ResponseEntity<>(
                 apiError, new HttpHeaders(), apiError.getStatus());
     }
+
+    @ExceptionHandler({ GithubDetailException.class })
+    public ResponseEntity<Object> handlingJson(Exception ex, WebRequest request) {
+        ErrorResponse apiError = new ErrorResponse(
+                HttpStatus.NOT_FOUND, ex.getLocalizedMessage() );
+        return new ResponseEntity<>(
+                apiError, new HttpHeaders(), apiError.getStatus());
+    }
+
+    @ExceptionHandler({ GitHubDetailNotAcceptExcetion.class })
+    public ResponseEntity<Object> handlingXml(Exception ex, WebRequest request) {
+        ErrorResponse apiError = new ErrorResponse(
+                HttpStatus.NOT_ACCEPTABLE, ex.getLocalizedMessage() );
+        return new ResponseEntity<>(
+                apiError, new HttpHeaders(), apiError.getStatus());
+    }
 }
