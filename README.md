@@ -51,7 +51,7 @@ Additionally, you have the following endpoints already for your testing of the a
 
 To test the health endpoint:
 ```
-http://localhost:8080/actuator/
+http://localhost:8080/actuator/health
 ```
 
 To see swagger:
@@ -67,14 +67,14 @@ Api spec for to see gitHubDetails
 
 
 Test bussines criteria 
-To see username's gitrepository detail (given header “Accept: application/json”)
+header “Accept: application/json” To see username's gitrepository detail
 ![image](https://user-images.githubusercontent.com/22048283/72680999-c5486800-3ae5-11ea-8c8f-5df2c9138207.png)
 
 
-To See invalid username error message (receive 404 response)
+header “Accept: application/json” To See invalid username error message (receive 404 response)
 ![image](https://user-images.githubusercontent.com/22048283/72681031-ef9a2580-3ae5-11ea-986e-a4dd0a7b8e8d.png)
 
-given header “Accept: application/xml” Invalid username error message ((receive 406 response)
+given header “Accept: application/xml” Invalid username error message (receive 406 response)
 ![image](https://user-images.githubusercontent.com/22048283/72681055-18bab600-3ae6-11ea-801e-d3f137875d45.png)
 
 given header “Accept: application/xml”, valid user (receive 406 response)
