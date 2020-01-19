@@ -43,10 +43,10 @@ public class GithubDetailBusinessTest {
     @InjectMocks
     private IGithubDetailBusiness githubDetailBusiness = new GithubDetailBusiness();
     @Value("${api.git.users}")
-    public String GITREPOS;
+    public String gitRepos;
 
     @Value("${api.git.repos}")
-    public String GITREPOBRANCH;
+    public String gitRepoBranch;
     @Before
     public void setup() {
         mockServer = MockRestServiceServer.createServer(restTemplate);
@@ -86,14 +86,14 @@ public class GithubDetailBusinessTest {
             branches.add(stringStringLinkedHashMap);
             Mockito.when(
                     restTemplate.getForObject(
-                            GITREPOS + "venkat" + "/repos",
+                            gitRepos + "venkat" + "/repos",
                             List.class
                     )
             ).thenReturn(repos);
 
             Assert.assertNotNull(this.githubDetailBusiness.getGithubDetail("venkat"));
             Mockito.when(
-                    restTemplate1.getForObject(GITREPOBRANCH  + "venkat" + "/"
+                    restTemplate1.getForObject(gitRepoBranch  + "venkat" + "/"
                             + repos.get(0).get("name") + "/branches", List.class
                     )
             ).thenReturn(branches);

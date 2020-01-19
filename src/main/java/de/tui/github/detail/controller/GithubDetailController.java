@@ -36,8 +36,6 @@ public class GithubDetailController {
     @ApiResponses({
         @ApiResponse(code = 201, message = "Successfully created GithubDetail"),
         @ApiResponse(code = 400, message = "ERROR_CODE_MESSAGE_BAD_REQUEST"),
-        @ApiResponse(code = 404, message = "NON_AUTHORITATIVE_INFORMATION"),
-        @ApiResponse(code = 406, message = "NON_AUTHORITATIVE_INFORMATION"),
         @ApiResponse(code = 500, message = "ERROR_CODE_MESSAGE_INTERNAL_ERROR")
     })
     public ResponseEntity<List<GithubDetail>> getGithubDetail(

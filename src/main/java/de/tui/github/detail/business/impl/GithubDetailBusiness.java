@@ -32,10 +32,10 @@ public class GithubDetailBusiness implements IGithubDetailBusiness {
     RestTemplate restTemplate;
 
     @Value("${api.git.users}")
-    public String GITREPOS;
+    public String gitRepos;
 
     @Value("${api.git.repos}")
-    public String GITREPOBRANCH;
+    public String gitRepoBranch;
 
     /**
      * @param username
@@ -46,7 +46,7 @@ public class GithubDetailBusiness implements IGithubDetailBusiness {
         try {
             //Finding the repositories by sending username in github api "https://api.github.com/users/{username}/repos"
             List<LinkedHashMap<String, String>> repos = restTemplate
-                    .getForObject(GITREPOS + username + "/repos", List.class);
+                    .getForObject(gitRepos + username + "/repos", List.class);
             // if username matches to any git repositories then verify is that repo forks?
             if (CollectionUtils.isNotEmpty(repos)) {
                 return gitBranches(username, repos);
@@ -70,7 +70,7 @@ public class GithubDetailBusiness implements IGithubDetailBusiness {
                 LOGGER.info("Login by {}, repository is {} ", username, repo.get("name"));
                 //finding the branches belongs to repository
                 List<LinkedHashMap<String, String>> branches = restTemplate
-                        .getForObject(GITREPOBRANCH + username + "/" + repo.get("name") + "/branches", List.class);
+                        .getForObject(gitRepoBranch + username + "/" + repo.get("name") + "/branches", List.class);
                  //if repository having branches then finding the branch name and last commit of branch
                  //else we just binding model with repository name and login value.
                 if (CollectionUtils.isNotEmpty(branches)) {

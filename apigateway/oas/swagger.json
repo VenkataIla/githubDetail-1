@@ -40,12 +40,6 @@
           "400" : {
             "description" : "ERROR_CODE_MESSAGE_BAD_REQUEST"
           },
-          "404" : {
-            "description" : "NON_AUTHORITATIVE_INFORMATION"
-          },
-          "406" : {
-            "description" : "NON_AUTHORITATIVE_INFORMATION"
-          },
           "500" : {
             "description" : "ERROR_CODE_MESSAGE_INTERNAL_ERROR"
           }
