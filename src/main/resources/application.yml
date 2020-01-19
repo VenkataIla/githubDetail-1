@@ -10,7 +10,9 @@ security:
        clientAuthenticationScheme: form
     resource:
       user-info-uri: https://api.github.com/user
-      prefer-token-info: false 
+      prefer-token-info: false
 
-GIT_USER_REPOS: https://api.github.com/users/
-IT_REPO_BRANCH: https://api.github.com/repos/
+api:
+  git:
+    users: https://api.github.com/users/
+    repos: https://api.github.com/repos/

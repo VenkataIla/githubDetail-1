@@ -23,6 +23,7 @@ public class GithubDetailTest {
         githubDetail2.setLastCommit("one");
         githubDetail2.setLogin("itsme");
         githubDetail2.setRepository("its Mine");
+        assertEquals(githubDetail2.equals(githubDetail2), true);
         assertEquals(githubDetail.equals(githubDetail2), false);
 
     }

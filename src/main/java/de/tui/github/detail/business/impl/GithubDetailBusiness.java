@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.slf4j.Logger;
@@ -30,8 +31,11 @@ public class GithubDetailBusiness implements IGithubDetailBusiness {
     @Autowired
     RestTemplate restTemplate;
 
-    public static final String GITREPOS = "https://api.github.com/users/";
-    public static final String GITREPOBRANCH = "https://api.github.com/repos/";
+    @Value("${api.git.users}")
+    public String GITREPOS;
+
+    @Value("${api.git.repos}")
+    public String GITREPOBRANCH;
 
     /**
      * @param username
@@ -73,7 +77,7 @@ public class GithubDetailBusiness implements IGithubDetailBusiness {
                     LOGGER.info("Login by {}, repository is {} and count of the branches is {}",
                             username, repo.get("name"), branches.size());
                     branches.forEach(branch -> {
-                        final GithubDetail user = new GithubDetail();
+                        GithubDetail user = new GithubDetail();
                         user.setLogin(username);
                         user.setRepository(repo.get("name"));
                         user.setBranch(branch.get("name"));
@@ -82,14 +86,11 @@ public class GithubDetailBusiness implements IGithubDetailBusiness {
                             final JSONObject iibJson = JSONObject.fromObject(branch.get("commit"));
                             final JsonNode jsonNode = new ObjectMapper().readTree(iibJson.toString());
                             user.setLastCommit(jsonNode.get("sha").textValue());
-                        } catch (Exception e) {
-                            throw new GithubDetailException();
-                        }
+                        } catch (Exception e) {throw new GithubDetailException();}
                         details.add(user);
                     });
                 } else {
-                    LOGGER.info("Login by {}, repository is {} does not have branches", username,
-                            repo.get("name"));
+                    LOGGER.info("Login by {}, repository is {} does not have branches", username,repo.get("name"));
                     final GithubDetail user = new GithubDetail();
                     user.setLogin(username);
                     user.setRepository(repo.get("name"));

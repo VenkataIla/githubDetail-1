@@ -86,6 +86,9 @@ Stop the service:
 cntr + c
 ```
 ## API
+```
+http://localhost:8080/v1/gitHubDetails?username={username}
+```
 
 For a walkthrough for extending the services functions, please [see the tutorial/dojo](docs/Dojo.md).
 
