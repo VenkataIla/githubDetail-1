@@ -90,15 +90,9 @@ cntr + c
 http://localhost:8080/v1/gitHubDetails?username={username}
 ```
 
-For a walkthrough for extending the services functions, please [see the tutorial/dojo](docs/Dojo.md).
-
 ## Maintainers
 
-none
-
-## Contribute
-
-// TODO: Contribute guidelines.
+Venkata Ila
 
 ## License
 
