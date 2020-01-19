@@ -14,7 +14,7 @@
   } ],
   "schemes" : [ "http", "https" ],
   "paths" : {
-    "/v1/gitHubByLoginId" : {
+    "/v1/gitHubDetails" : {
       "get" : {
         "tags" : [ "GithubDetail Domain Object Controller" ],
         "summary" : "Add a GithubDetail object to the database",

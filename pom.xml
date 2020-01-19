@@ -216,7 +216,7 @@
                         </goals>
                         <configuration>
                             <excludes>
-
+                                <exclude>**/exception/CustomExceptionHandler.*</exclude>
                                 <exclude>**/*Application.*</exclude>
                             </excludes>
                         </configuration>

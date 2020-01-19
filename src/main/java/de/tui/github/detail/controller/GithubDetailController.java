@@ -31,7 +31,7 @@ public class GithubDetailController {
     @Autowired
     private IGithubDetailBusiness githubDetailBusiness;     
 
-    @GetMapping(value = "/gitHubByLoginId", produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
+    @GetMapping(value = "/gitHubDetails", produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
     @ApiOperation(value = "Add a GithubDetail object to the database", response = ResponseEntity.class)
     @ApiResponses({
         @ApiResponse(code = 201, message = "Successfully created GithubDetail"),

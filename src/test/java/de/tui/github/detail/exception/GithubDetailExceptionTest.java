@@ -7,8 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GithubDetailExceptionTest {
     
@@ -18,12 +17,16 @@ public class GithubDetailExceptionTest {
     void testException() {
         final GithubDetailException ex = new GithubDetailException("Test Exception Message");
         assertEquals("Test Exception Message",ex.getMessage());
+        final GithubDetailException ex2 = new GithubDetailException();
+        assertNull(ex2.getMessage());
     }
 
     @Test
     void testNotAcceptException() {
         final GitHubDetailNotAcceptExcetion ex = new GitHubDetailNotAcceptExcetion("Test Exception Message");
         assertEquals("Test Exception Message",ex.getMessage());
+        final GitHubDetailNotAcceptExcetion ex2 = new GitHubDetailNotAcceptExcetion();
+        assertNull(ex2.getMessage());
     }
 
     @Test

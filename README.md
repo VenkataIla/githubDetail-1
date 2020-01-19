@@ -31,10 +31,9 @@ To test the application:
 ```
 mvn clean compile test
 ```
-
-To run the integration tests:
+To build the application:
 ```
-mvn verify -Psurefire
+mvn clean install
 ```
 
 To run the application:
@@ -52,12 +51,7 @@ Additionally, you have the following endpoints already for your testing of the a
 
 To test the health endpoint:
 ```
-localhost:8080/health
-```
-
-To test the metrics endpoint:
-```
-localhost:8080/health
+http://localhost:8080/actuator/
 ```
 
 To see swagger:
@@ -65,11 +59,6 @@ To see swagger:
 localhost:8080/swagger-ui.html
 ```
 
-
-To see the H2 console:
-```
-localhost:8080/h2-console
-```
 
 Stop the service:
 ```bash
