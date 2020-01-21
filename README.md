@@ -16,10 +16,6 @@
 
 Once you have cloned this repository, simply import it into your IDE of choosing for editing.
 
-Before using this application, you will need to [download and run version 2.3.0 of Kafka](https://kafka.apache.org/downloads).
-
-Once downloaded, you can [check out the quickstart guide](https://kafka.apache.org/quickstart) to have your instance running.
-
 ## Usage
 
 To compile the application:
