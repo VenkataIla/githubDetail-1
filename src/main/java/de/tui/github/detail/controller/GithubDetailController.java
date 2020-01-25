@@ -31,7 +31,7 @@ public class GithubDetailController {
     @Autowired
     private IGithubDetailBusiness githubDetailBusiness;     
 
-    @GetMapping(value = "/gitHubDetails", produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
+    @GetMapping(value = "/gitHubDetails/{username}", produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
     @ApiOperation(value = "Add a GithubDetail object to the database", response = ResponseEntity.class)
     @ApiResponses({
         @ApiResponse(code = 201, message = "Successfully created GithubDetail"),
@@ -40,7 +40,7 @@ public class GithubDetailController {
     })
     public ResponseEntity<List<GithubDetail>> getGithubDetail(
         @ApiParam(value = "GithubDetail object store in database table", required = true)
-        @RequestParam final String username, @RequestHeader("Accept") String contentType) {
+        @PathVariable final String username, @RequestHeader("Accept") String contentType) {
         if(StringUtils.equalsIgnoreCase(contentType,"application/xml"))
         {
             throw new GitHubDetailNotAcceptExcetion("406 Could not find acceptable representation");
