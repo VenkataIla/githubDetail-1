@@ -59,7 +59,8 @@ Api spec in Swagger-ui html.
 ![image](https://user-images.githubusercontent.com/22048283/72680942-376c7d00-3ae5-11ea-8ea3-d13f30635e19.png)
 
 Api spec for to see gitHubDetails
-![image](https://user-images.githubusercontent.com/22048283/72680967-74387400-3ae5-11ea-9ebb-9ccbf80400be.png)
+
+![image](https://user-images.githubusercontent.com/22048283/73125650-406eba00-3fcf-11ea-815a-1b48f4ae5fcd.png)
 
 
 Test bussines criteria 
@@ -88,7 +89,7 @@ cntr + c
 ```
 ## API
 ```
-http://localhost:8080/v1/gitHubDetails?username={username}
+http://localhost:8080/v1/gitHubDetails/{username}
 ```
 
 ## Maintainers
