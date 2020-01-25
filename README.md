@@ -64,17 +64,22 @@ Api spec for to see gitHubDetails
 
 Test bussines criteria 
 header “Accept: application/json” To see username's gitrepository detail
-![image](https://user-images.githubusercontent.com/22048283/72680999-c5486800-3ae5-11ea-8c8f-5df2c9138207.png)
+![image](https://user-images.githubusercontent.com/22048283/73125599-81b29a00-3fce-11ea-9100-8df1a9bf9e35.png)
+
 
 
 header “Accept: application/json” To See invalid username error message (receive 404 response)
-![image](https://user-images.githubusercontent.com/22048283/72681031-ef9a2580-3ae5-11ea-986e-a4dd0a7b8e8d.png)
+
+![image](https://user-images.githubusercontent.com/22048283/73125614-bc1c3700-3fce-11ea-9e9f-08a922683622.png)
+
 
 given header “Accept: application/xml” Invalid username error message (receive 406 response)
-![image](https://user-images.githubusercontent.com/22048283/72681055-18bab600-3ae6-11ea-801e-d3f137875d45.png)
+
+![image](https://user-images.githubusercontent.com/22048283/73125621-da823280-3fce-11ea-802d-d32a4f8aa009.png)
 
 given header “Accept: application/xml”, valid user (receive 406 response)
-![image](https://user-images.githubusercontent.com/22048283/72681066-3a1ba200-3ae6-11ea-8084-9db010de5c15.png)
+
+![image](https://user-images.githubusercontent.com/22048283/73125635-fc7bb500-3fce-11ea-8766-48681e007399.png)
 
 
 Stop the service:
