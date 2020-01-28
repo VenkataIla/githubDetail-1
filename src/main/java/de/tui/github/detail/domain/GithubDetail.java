@@ -1,6 +1,7 @@
 /*
-* Copyright (c) .
-*/
+ * Copyright (c)
+ * @author Venkata Ila
+ */
 package de.tui.github.detail.domain;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;

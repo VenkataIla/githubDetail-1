@@ -1,6 +1,7 @@
 /*
-* Copyright (c).
-*/
+ * Copyright (c)
+ * @author Venkata Ila
+ */
 package de.tui.github.detail.business;
 
 import de.tui.github.detail.business.impl.GithubDetailBusiness;

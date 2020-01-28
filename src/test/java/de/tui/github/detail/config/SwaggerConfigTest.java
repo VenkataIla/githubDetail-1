@@ -1,3 +1,8 @@
+/*
+ * Copyright (c)
+ * @author Venkata Ila
+ */
+
 package de.tui.github.detail.config;
 
 import org.junit.jupiter.api.DisplayName;

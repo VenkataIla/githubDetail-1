@@ -1,4 +1,9 @@
 
+/*
+ * Copyright (c)
+ * @author Venkata Ila
+ */
+
 package de.tui.github.detail.exception;
 
 import de.tui.github.detail.business.IGithubDetailBusiness;
