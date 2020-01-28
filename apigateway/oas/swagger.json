@@ -14,7 +14,7 @@
   } ],
   "schemes" : [ "http", "https" ],
   "paths" : {
-    "/v1/gitHubDetails" : {
+    "/v1/gitHubDetails/{username}" : {
       "get" : {
         "tags" : [ "GithubDetail Domain Object Controller" ],
         "summary" : "Add a GithubDetail object to the database",
@@ -23,7 +23,7 @@
         "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
           "name" : "username",
-          "in" : "query",
+          "in" : "path",
           "description" : "GithubDetail object store in database table",
           "required" : true,
           "type" : "string"
@@ -35,7 +35,7 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "Successfully created GithubDetail"
+            "description" : "Successfully retrieved GithubDetail list "
           },
           "400" : {
             "description" : "ERROR_CODE_MESSAGE_BAD_REQUEST"
